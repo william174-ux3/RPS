@@ -23,14 +23,42 @@ def string_checker(question, valid_ans=('yes', 'no')):
         print(error)
         print()
 
+# Displays instructions
 
-# Main Routine goes here
+def instructions():
+    """Prints instructions"""
 
-rps_list = ["rock", "paper", "scissors", "xxx"]
+    print("""
+*** Instructions ***
 
+To begin, choose the number of rounds (or press <enter> for infinite mode).
+
+The play against the computer. You need to choose R (rock),
+P (paper) or S (scissors).
+
+The rules are as follows:
+o   Paper beats rock
+o   Rock beats scissors
+o   Scissors beats paper
+
+Press <enter> to end the game at anytime.
+
+
+Good Luck!
+    """)
+
+
+# Main routine
+print()
+print("Rock / Paper / Scissors Game")
+print()
+
+# ask user if they want to see the instructions and display
+# them if requested
 want_instructions = string_checker("Do you want to see the instructions? ")
 
-print("You chose: ", want_instructions)
+# checks users enter yes (y) or no (n)
+if want_instructions == "yes":
+    instructions()
 
-user_choice = string_checker("Choose: ", rps_list)
-print("You chose: ", user_choice)
+print("Program continues")
